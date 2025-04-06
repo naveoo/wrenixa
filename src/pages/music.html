@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/main.css">
+    <title>Wrenixa</title>
+</head>
+<body>
+    <header></header>
+
+    <div class="content">
+        <section class="title">
+            <h2>WRENIXA</h2>
+        </section>
+        <div class="music">
+            
+        </div>
+    </div>
+    <footer></footer>
+    <script>
+        fetch("../components/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementsByTagName("header")[0].innerHTML = data;
+            });
+        fetch("../components/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementsByTagName("footer")[0].innerHTML = data;
+            });
+    </script>
+</body>
+</html>
