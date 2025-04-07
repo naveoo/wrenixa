@@ -198,12 +198,14 @@ footer p {
 }
 #socials > ul {
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
     padding: 0;
+    width: 100%;
 }
 
 #socials > ul > li {
     position: relative;
-    overflow: hidden;
     margin: 20px 0;
 }
 
@@ -212,6 +214,7 @@ footer p {
     align-items: center;
     position: relative;
     width: fit-content;
+    padding: 16px 250px;
     transition: all 0.3s ease;
 }
 
@@ -243,10 +246,3 @@ footer p {
     opacity: 1;
     transform: translateX(0px);
 }
-
-/*
-==============================
-    Legal mentions
-==============================
-*/
-
