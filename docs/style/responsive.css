@@ -29,7 +29,6 @@
 
 @media (max-width: 768px) {
     .hamburger {
-        flex: 1 1 100%;
         text-align: right;
         display: block;
     }
@@ -51,5 +50,64 @@
 
     nav.show {
         display: flex;
+    }
+
+    #description {
+        flex-direction: column;
+        padding: 5% 3%;
+    }
+    #description > div:first-child {
+        width: 100%;
+        padding: 0%;
+        text-align: center;
+    }
+    #description > div:not(:first-child) {
+        position: relative;
+        width: 90%;
+        margin: 20px auto 0;
+        border-radius: 20px;
+        padding-bottom: 20px;
+    }
+    #description > div:first-child > img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+    #description:not(:first-child) img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+    #description > div:not(:first-child) > audio {
+        transform: translateY(0);
+        margin: 10px auto;
+        display: block;
+        width: 90%;
+    }
+    #description h2 {
+        font-size: 1.5em;
+        margin-top: 10px;
+    }
+    .content {
+        margin-top: 80px;
+    }
+    .title h1 {
+        font-size: 15vw;
+        margin-top: 40%;
+        margin-bottom: 40%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #description > div:not(:first-child) > audio {
+        width: 100%;
+    }
+    
+    header {
+        padding: 5px 10px;
+    }
+    
+    header img {
+        height: 40px;
     }
 }
