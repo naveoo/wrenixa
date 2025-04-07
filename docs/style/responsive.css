@@ -1,0 +1,55 @@
+:root {
+    --warm-cream: #E0DAD0;
+    --pale-pink: #E5CCD8;
+    --dusty-rose: #E3D0D6;
+    --lavender-gray: #E1D5E3;
+    --soft-lilac: #E0CBED;
+    --pastel-purple: #C5B9CF;
+    --cool-gray: #C1BDD1;
+    --vivid-rose: #DCA5CA;
+    --deep-rose: #BD7EA8;
+    --dusty-mauve: #9979A0;
+    --rich-purple: #8C799C;
+    --muted-plum: #816C77;
+    --soft-beige: #B39792;
+    --warm-gold: #DAB94F;
+    --muted-indigo: #535683;
+    --deep-navy: #353549;
+    --midnight-blue: #33395C;
+    --charcoal: #3B393D;
+    --olive-brown: #675C38;
+    --onyx-black: #252027;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        flex: 1 1 100%;
+        text-align: right;
+        display: block;
+    }
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: var(--midnight-blue);
+        width: 100%;
+        display: none;
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav.show {
+        display: flex;
+    }
+}

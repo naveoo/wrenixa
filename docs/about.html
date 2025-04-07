@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/responsive.css">
     <title>Wrenixa</title>
 </head>
 <body>
@@ -37,12 +38,21 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementsByTagName("header")[0].innerHTML = data;
+    
+                const hamburger = document.getElementById('hamburger');
+                const navMenu = document.getElementById('nav-menu');
+    
+                hamburger.addEventListener('click', () => {
+                    console.log("Menu hamburger cliqué !");
+                    navMenu.classList.toggle('show');
+                });
             });
+    
         fetch("components/footer.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementsByTagName("footer")[0].innerHTML = data;
             });
-    </script>
+        </script>
 </body>
 </html>
